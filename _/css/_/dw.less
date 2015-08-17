@@ -1,0 +1,218 @@
+/* ####################################################### */
+/* RESET.LESS */
+*{margin:0; padding:0;}*:focus{ outline: none;}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,meter,nav,object,ol,output,p,pre,progress,q,rp,rt,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp{border:0;font-size:100%;margin:0;padding:0}html,body{height:100%}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}b,strong{font-weight:bold}img{font-size:0;vertical-align:middle;-ms-interpolation-mode:bicubic}li{display:list-item}table{border-collapse:collapse;border-spacing:0}th,td,caption{font-weight:normal;vertical-align:top;text-align:left}svg{overflow:hidden}
+/* ####################################################### */
+/* MEDIA QUERIES */
+@mobile:      ~"only screen and (max-width: 480px)";
+@tablet:      ~"only screen and (min-width: 481px) and (max-width: 959px)";
+@desktop:     ~"only screen and (min-width: 960px)";
+.nodesktop{ @media @desktop{display:none;} }
+.notablet{ @media @tablet, @mobile{ display: none; } }
+.nomobile{ @media @mobile{ display: none; } }
+/* ####################################################### */
+/* COLUMNS GRID */
+@containerWidth : 960px;
+.container{
+  width: @containerWidth;
+  margin: 0 auto;
+  .clearfix;
+  @media @tablet{
+    width: 480px;
+  }
+  @media @mobile{
+    width: 100%;
+  }
+  .container{ width: 100%; }
+}
+@maxWidth : 100; //Responsive
+@columns: 12;
+@gutter: 1.041;
+@column : round( (@maxWidth/@columns) - (@gutter*2) , 5);
+.col(@cols, @tabletcols:6, @mobilecols:12, @responsive:true){
+  display: block;
+  float: left;
+  width:  unit(((@column * @cols) + ( (@gutter*2) * ( @cols - (1) ) )), %);
+  margin: 0  unit(@gutter, %);
+  & when (@responsive=true){
+    .col-t(@tabletcols);
+    .col-m(@mobilecols);
+  }
+}
+
+.col-t(@tabletcols:@columns/2){
+  @media @tablet{
+    width:  unit(((@column * @tabletcols) + ( (@gutter*2) * ( @tabletcols - (1) ) )), %);
+  }
+}
+.col-m(@mobilecols:@columns){
+  @media @mobile{
+    width:  unit(((@column * @mobilecols) + ( (@gutter*2) * ( @mobilecols - (1) ) )), %);
+  }
+}
+
+.push(@offset:1, @tabletOffset:@offset, @mobileOffset: 0, @responsive:false){
+  margin-left: unit( @gutter + (@column * @offset) + ((@gutter*2)*@offset) , %);
+  & when (@responsive=true){
+    .push-t(@tabletOffset);
+    .push-m(@mobileOffset);
+  }
+}
+.push-t(@tabletOffset){
+  @media @tablet{
+    margin-left: unit( @gutter + (@column * @tabletOffset) + ((@gutter*2)*@tabletOffset) , %);
+  }
+}
+.push-m(@mobileOffset){
+  @media @mobile{
+    margin-left: unit( @gutter + (@column * @mobileOffset) + ((@gutter*2)*@mobileOffset) , %);
+  }
+}
+
+
+//Display GRID para container
+.grid{
+  background: url(http://griddle.it/940-12-20?num=0) repeat-y;
+  background-size:940px;
+  background-position: center;
+  outline: 1px solid rgba(0,0,0,0.2);
+  position: relative;
+  @media @tablet{
+    background: url(http://griddle.it/464-12-8?num=0) repeat-y;
+    background-size: 470px;
+    background-position: 4px;
+  }
+  @media @mobile{
+    background: url(http://griddle.it/960-12-20?num=0) repeat-y;
+    background-size: 100%-(@gutter*2);
+    background-position:center;
+  }
+  &:before{
+    content:".container";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.6em;
+    color:#aaa;
+  }
+}
+// HTML AS FRAMEWORK COLUMN GRID
+// cols
+.generator-c(@columns);
+.generator-c(@n, @i:1) when (@i<=@n){
+  .col@{i}{
+    .col(@i, @i, @i, false);
+  }
+  .generator-c(@n, (@i+1));
+}
+// col-t
+.generator-ct(@columns);
+.generator-ct(@n, @i:1) when (@i<=@n){
+  .col-t@{i}{
+    .col-t(@i);
+  }
+  .generator-ct(@n, (@i+1));
+}
+// col-m
+.generator-cm(@columns);
+.generator-cm(@n, @i:1) when (@i<=@n){
+  .col-m@{i}{
+    .col-m(@i);
+  }
+  .generator-cm(@n, (@i+1));
+}
+// push
+.generator-p(@columns);
+.generator-p(@n, @i:1) when (@i<=@n){
+  .push@{i}{
+    .push(@i, @i, @i, false);
+  }
+  .generator-p(@n, (@i+1));
+}
+// push-t
+.generator-pt(@columns);
+.generator-pt(@n, @i:1) when (@i<=@n){
+  .push-t@{i}{
+    .push-t(@i);
+  }
+  .generator-pt(@n, (@i+1));
+}
+// push-m
+.generator-pm(@columns);
+.generator-pm(@n, @i:1) when (@i<=@n){
+  .push-m@{i}{
+    .push-m(@i);
+  }
+  .generator-pm(@n, (@i+1));
+}
+
+
+/* ####################################################### */
+/* IMPORTS */
+/* LESS HAT */
+@import 'lesshat';
+
+
+/* ####################################################### */
+/* CLASS UTILS */
+.clearfix{
+	*zoom:1;
+	&:before,&:after { content:""; display:table;}
+  &:after { clear:both; 	}
+}
+.w100{ width: 100%; }
+.t{
+  outline: 1px dashed rgba(0,0,0,0.2);
+}
+
+
+/* GENERAL STYLES */
+/*------ NAV ------*/
+/* .horizontal */
+ul{
+  &.horizontal{
+    list-style: none;
+    li{
+      position: relative;
+      a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+      }
+      &:hover{
+        ul{
+          display: block;
+        }
+      }
+      &>ul{
+        position: absolute;
+        display: none;
+        width: 100%;
+        list-style: none;
+      }
+    }
+  }
+}
+
+
+
+
+/* PLUGINS styles */
+/* SLICK SLIDER */
+.slick-arrow{
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  position: absolute;
+  border: none;
+  background: @main;
+  color: @b;
+  z-index: 10;
+  &.slick-prev{ left: 0;}
+  &.slick-next{ right: 0; }
+  &:hover{
+    cursor: pointer;
+    background: @b;
+    color: @main;
+  }
+}

@@ -1,0 +1,35 @@
+include _config.jade
+include _mixins.jade
+
+doctype html
+html(lang="es")
+	head
+		+head(titulo + " | " , stylesheets, keywords, description)
+	body
+		.wrapper
+			+header('proceso-elaboracion', logoAlt)
+			
+			.container
+				.col12.tac
+					.redtitle - PROCESO DE ELABORACIÓN -
+			
+			.container
+				.col4
+					a(href="#").proceso-cre
+						| Creatividad 
+						.ico
+					a(href="#").proceso-pre
+						| Precisión 
+						.ico
+					a(href="#").proceso-tec
+						| Tecnología 
+						.ico
+				.col8
+					
+					.proceso
+						div: img(src="_/img/pensamiento.png", alt="")
+						div: img(src="http://placehold.it/612x699", alt="")
+						div: img(src="http://placehold.it/612x699", alt="")
+					
+		+scripts
+		

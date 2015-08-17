@@ -1,0 +1,22 @@
+include _config.jade
+include _mixins.jade
+
+doctype html
+html(lang="es")
+	head
+		+head(titulo + " | " , stylesheets, keywords, description)
+	body.portfolio
+		.wrapper
+			+header('portafolio', logoAlt)
+			
+			- for(e=0;e<4;e++)
+				.container
+					- for(i=0;i<3;i++)
+						a(href="http://placehold.it/600x360", data-fluidbox).galleryitem.col4.tac.t
+							.ico
+							img(src="http://placehold.it/300x180", alt="")
+
+			
+					
+		+scripts
+		

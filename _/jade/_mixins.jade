@@ -1,0 +1,41 @@
+mixin head(titleText, links, keywords, description)
+  meta(charset="utf-8")
+  title=titleText
+  meta(name="description" content=description)
+  meta(name="keywords" content=keywords)
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  - each ls in links
+    link(rel="stylesheet", href=ls)  
+  link(rel="stylesheet", href="_/css/_style.css")
+  link(rel="icon", type="image/png", href="favicon.png")
+
+
+
+mixin logo(logo, titulo, dominio)
+  .logo: a(href=dominio): img(src="_/img/#{logo}", alt=titulo)
+
+
+
+mixin navigation(activePage, nav)
+  ul
+    - each n in nav
+      li
+        a(href="#{n[0]}.html", class=activePage=== "#{n[0]}" ? "active" : "")=n[1]
+        if n[2]
+          ul
+            - each ni in n[2]
+              li: a(href="#{ni[0]}.html", class=activePage=== "#{ni[0]}" ? "active" : "")=ni[1]
+          
+            
+
+mixin navigationFooter(activePage, nav)
+  ul
+    - each n in nav
+      li: a(href="#{n[0]}.html", class=activePage=== "#{n[0]}" ? "active" : "")=n[1]  
+      
+
+ 
+
+mixin scripts()
+  - each sc in javascripts
+    script(src="_/js/#{sc}")

@@ -1,0 +1,32 @@
+- var titulo = "Productos Comerciales México"
+- var dominio = "index.html"
+//META TAGS
+- var keywords = ""
+- var description = ""
+- var stylesheets = ['http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', 'http://fonts.googleapis.com/css?family=Cabin+Condensed:400,700']
+- var javascripts = ['_/jquery.js', '_/slick.js', '_/imagesloaded.js', '_/fluidbox.js', '_/gmaps.js', '_script.js']
+// Sitio
+- var logo = "productos-comerciales-mexico.png"
+- var logoAlt = "productos-comerciales-mexico_invertido.png"
+
+//Menus
+- var productosSub = [['pop', 'POP & Merchandising'], ['packaging', 'Packaging Folding Boxes'], ['pallets', 'Pallets'], ['brochures', 'Brochures Stationey'], ['complementary-services','Complementary services']]
+- var empresaSub = [['proceso-elaboracion', 'Proceso de elaboración'],  ['mision-vision-filosofia','Misión, Visión y Filosofía' ]]
+- var menu = [['index', 'Inicio'], ['productos', 'Productos', productosSub], ['proceso-elaboracion', 'Empresa', empresaSub], ['clientes', 'Clientes'], ['portafolio', 'Portafolio'], ['contacto', 'Contacto']]
+
+
+mixin header(page, logoType)
+	header
+		#header
+			+logo(logoType,titulo,dominio)
+			+socials
+		
+		nav: +navigation(page,menu)
+mixin footer
+	footer
+
+mixin socials
+	.socials
+		a(href="#"): i.fa.fa-facebook-square
+		a(href="#"): i.fa.fa-twitter-square
+		a(href="#"): i.fa.fa-linkedin-square

@@ -1,0 +1,31 @@
+include _config.jade
+include _mixins.jade
+
+doctype html
+html(lang="es")
+	head
+		+head(titulo + " | " , stylesheets, keywords, description)
+	body
+		.wrapper
+			+header('Pallets', logoAlt)
+			
+			.container.genProducts
+				.menuGen
+					h1 Pallets
+					
+					- var lista = ['Tarima cheap <small>100x120cm</small>', 'Pallet falso', 'Pallet escalonado', 'Pallet tipo botadero', '1/4 de pallet', '1/2 pallet']
+					
+					ul
+						- for(li in lista)
+							li: a(href="##{li}", onClick="$('.gen-slider').slick('slickGoTo', #{li});").linkSlider !{lista[li]}
+				.gen-slider
+					div
+						article.mensaje
+							p Nuestro proceso comienza en la resolución de los desafíos que se presentan al realizar una caja o un empaque, con un conocimiento previo de su mercado, nuestros asesores creativos, que cuentan con una gran experiencia técnica, nos brindan una gama de opciones innovadoras adecuadas a sus necesidades tanto rentables como sustentables
+						img(src="_/img/pallets.jpg", alt="")
+					- for(var i = 0; i<10; i++)
+						div: img(src="_/img/pallets.jpg", alt="")
+				
+
+		+scripts
+		

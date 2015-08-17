@@ -1,0 +1,15 @@
+include _config.jade
+include _mixins.jade
+
+doctype html
+html(lang="es")
+	head
+		+head(titulo + " | " , stylesheets, keywords, description)
+	body.productos
+		.wrapper
+			+header('productos', logoAlt)
+
+			.productsSubmenu
+				+navigation(page,productosSub)
+
+		+scripts
