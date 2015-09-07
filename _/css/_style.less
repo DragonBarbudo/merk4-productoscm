@@ -66,7 +66,7 @@ header{
 			margin-top: 20px;
 			text-align: right;
 			a{
-				margin: 5px; 
+				margin: 5px;
 				color: @w;
 				&:hover{
 					color: @gray;
@@ -79,7 +79,7 @@ header{
 		ul{
 			.clearfix;
 			text-align: center;
-			border-bottom:4px solid @w; 
+			border-bottom:4px solid @w;
 			margin-top: -90px;
 			position: relative;
 			li{
@@ -111,6 +111,7 @@ header{
 					left: 0;
 					border-bottom: none;
 					li{
+							margin: 0 5px;
 							a{
 								padding: 5px;
 								font-size: 1em;
@@ -120,7 +121,7 @@ header{
 				&:hover{
 					ul{
 						display: block;
-						
+
 					}
 				}
 			}
@@ -186,17 +187,25 @@ header{
 
 
 .proceso-cre, .proceso-pre, .proceso-tec{
-	font-size: 2em;
+	display: block;
+	font-size: 1.5em;
 	color: @b;
 	text-decoration: none;
 	.clearfix;
-	line-height: 180px;
+	line-height:140px;
+	text-align: center;
 	.ico{
 		width: 140px; height: 180px;
 		display: inline-block;
-		float: right;
 		background-position: top left;
 		.transition( all 100ms ease-out);
+		vertical-align: middle;
+		float: right;
+	}
+	.span{
+		display: inline-block;
+		width: 50%;
+		float: left;
 	}
 	&.proceso-cre .ico{
 		background-image: url(../img/ico_creatividad.png);
@@ -252,40 +261,47 @@ header{
 
 
 #map-contact{
-	height: 280px;
-	margin-top: 20px;
+	height: 562px;
+	margin-top: 0;
+	margin-left: -33px;	
 }
 
 
 
 .contactInfo{
+	position: relative;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	width: 100%;
+	background: #D44D55;
 	.font;
+	color:@w;
+
+
 	.info{
 		margin: 40px 0;
+
 		.clearfix;
 		img{
-			float: left;
+
 			height: 100%;
 		}
 		.text{
-			margin-left: 80px;
 			margin-top: 14px;
 			a{
-				color: @b;
+				color: @w;
 				text-decoration: none;
 				&:hover{
-					color: @red;
+					color: @b;
 				}
 			}
-			
-			
+
+
 			.container{
 				margin-bottom: 5px;
-				color: @red;
+				color: @w;
 				input,textarea{
-					background: @gray*1.6;
+					background: @w;
 					border:none;
 					padding: 4px 6px;
 					.font;
@@ -293,6 +309,9 @@ header{
 					width: 100%;
 					font-size: 1.1em;
 					display: block;
+				}
+				.messageIcon{
+					margin-top: -30px;
 				}
 				&.radios{
 					font-size: 0.9em;
@@ -326,7 +345,7 @@ header{
 				}
 				button{
 					display: block;
-					width: 100%;
+					width: 50%;
 					border:none;
 					padding: 10px 20px;
 					.font;
@@ -334,11 +353,18 @@ header{
 					background: @red;
 					cursor: pointer;
 					font-size: 1.1em;
+					float: right;
 					&:hover{
 						background: @b;
 					}
 				}
 			}
+		}
+	}
+	.formInfo{ background: #FDA050; margin: 0; padding: 40px 0;
+		label{
+			font-size:1.2em;
+			font-weight: lighter;
 		}
 	}
 }
@@ -425,3 +451,4 @@ header{
 	}
 }
 
+.marginTopper{margin-top: 40px;}

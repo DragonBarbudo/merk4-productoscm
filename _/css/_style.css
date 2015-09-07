@@ -1290,6 +1290,9 @@ header nav ul li ul {
   left: 0;
   border-bottom: none;
 }
+header nav ul li ul li {
+  margin: 0 5px;
+}
 header nav ul li ul li a {
   padding: 5px;
   font-size: 1em;
@@ -1383,11 +1386,13 @@ header nav ul li:hover ul {
 .proceso-cre,
 .proceso-pre,
 .proceso-tec {
-  font-size: 2em;
+  display: block;
+  font-size: 1.5em;
   color: #333333;
   text-decoration: none;
   *zoom: 1;
-  line-height: 180px;
+  line-height: 140px;
+  text-align: center;
 }
 .proceso-cre:before,
 .proceso-pre:before,
@@ -1409,12 +1414,20 @@ header nav ul li:hover ul {
   width: 140px;
   height: 180px;
   display: inline-block;
-  float: right;
   background-position: top left;
   -webkit-transition: all 100ms ease-out;
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
+  vertical-align: middle;
+  float: right;
+}
+.proceso-cre .span,
+.proceso-pre .span,
+.proceso-tec .span {
+  display: inline-block;
+  width: 50%;
+  float: left;
 }
 .proceso-cre.proceso-cre .ico,
 .proceso-pre.proceso-cre .ico,
@@ -1487,14 +1500,19 @@ header nav ul li:hover ul {
   transition: all 300ms;
 }
 #map-contact {
-  height: 280px;
-  margin-top: 20px;
+  height: 562px;
+  margin-top: 0;
+  margin-left: -33px;
 }
 .contactInfo {
+  position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  background: #D44D55;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
+  color: #ffffff;
 }
 .contactInfo .info {
   margin: 40px 0;
@@ -1509,27 +1527,25 @@ header nav ul li:hover ul {
   clear: both;
 }
 .contactInfo .info img {
-  float: left;
   height: 100%;
 }
 .contactInfo .info .text {
-  margin-left: 80px;
   margin-top: 14px;
 }
 .contactInfo .info .text a {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 .contactInfo .info .text a:hover {
-  color: #cb1d24;
+  color: #333333;
 }
 .contactInfo .info .text .container {
   margin-bottom: 5px;
-  color: #cb1d24;
+  color: #ffffff;
 }
 .contactInfo .info .text .container input,
 .contactInfo .info .text .container textarea {
-  background: #d5d5d5;
+  background: #ffffff;
   border: none;
   padding: 4px 6px;
   font-family: 'Cabin Condensed', sans-serif;
@@ -1540,6 +1556,9 @@ header nav ul li:hover ul {
   width: 100%;
   font-size: 1.1em;
   display: block;
+}
+.contactInfo .info .text .container .messageIcon {
+  margin-top: -30px;
 }
 .contactInfo .info .text .container.radios {
   font-size: 0.9em;
@@ -1575,7 +1594,7 @@ header nav ul li:hover ul {
 }
 .contactInfo .info .text .container button {
   display: block;
-  width: 100%;
+  width: 50%;
   border: none;
   padding: 10px 20px;
   font-family: 'Cabin Condensed', sans-serif;
@@ -1584,9 +1603,19 @@ header nav ul li:hover ul {
   background: #cb1d24;
   cursor: pointer;
   font-size: 1.1em;
+  float: right;
 }
 .contactInfo .info .text .container button:hover {
   background: #333333;
+}
+.contactInfo .formInfo {
+  background: #FDA050;
+  margin: 0;
+  padding: 40px 0;
+}
+.contactInfo .formInfo label {
+  font-size: 1.2em;
+  font-weight: lighter;
 }
 .genProducts {
   position: relative;
@@ -1716,4 +1745,7 @@ header nav ul li:hover ul {
   -webkit-opacity: 0.6;
   -moz-opacity: 0.6;
   opacity: 0.6;
+}
+.marginTopper {
+  margin-top: 40px;
 }

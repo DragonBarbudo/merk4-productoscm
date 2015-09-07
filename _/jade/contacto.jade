@@ -9,59 +9,57 @@ html(lang="es")
 		.wrapper
 			+header('contacto', logoAlt)
 			
-			#map-contact
+			
 			.container.contactInfo
-				.col5
-					div.info
-						img(src="_/img/icon_loc.png", alt="Localízación")
-						.text 10 de Abril de 1859 # 29 <br> Col. Leyes de Reforma, Iztapalapa. <br> C.P. 09310. México D.F. 
-					div.info
-						img(src="_/img/icon_mail.png", alt="Correo electrónico")
-						.text: a(href="mailto:contacto@productoscomerciales.com.mx") contacto@productoscomerciales.com.mx
-					div.info
-						img(src="_/img/icon_call.png", alt="Teléfono")
-						.text: a(href="tel:56943957") (55) 56 94 39 57
-				.col7
-					div.info
-						img(src="_/img/icon_form.png", alt="Formulario de contacto")
-						.text
-							.container
-								.col3: label(for="nombre") Nombre
-								.col9: input(type="text", name="Nombre", id="nombre")
-							.container
-								.col3: label(for="correo") Correo
-								.col9: input(type="email", name="Correo", id="correo")
-							.container
-								.col3: label(for="empresa") Empresa
-								.col9: input(type="text", name="Empresa", id="empresa")
-							.container
-								.col3: label(for="necesito") Necesito
-								.col9
-									.container.radios
-										.col4
-											input(type="radio", name="Necesito", value="Pop & Merchandising", id="pop")
-											label(for="pop") Pop<br>& Merchandising
-										.col4
-											input(type="radio", name="Necesito", value="Packaging Folding Boxes", id="pack")
-											label(for="pack") Packaging<br>Folding Boxes
-										.col4
-											input(type="radio", name="Necesito", value="Pallets", id="pallets")
-											label(for="pallets") Pallets
-									.container.radios
-										.col5.push1
-											input(type="radio", name="Necesito", value="Brochures Stationey", id="brochures")
-											label(for="brochures") Brochures Stationey
-										.col5
-											input(type="radio", name="Necesito", value="Complementary services", id="compl")
-											label(for="compl") Complementary Services
-							.container
-								.col3: label(for="mensaje") Mensaje
-								.col9: textarea(type="text", name="Mensaje", id="mensaje")
-							.container
-								.col3.push9
-									button(type="submit") Enviar
-							
-
+				.col8
+					.container
+						.col5
+							div.info
+								img(src="_/img/icon_loc.png", alt="Localízación")
+								.text 10 de Abril de 1859 # 29 <br> Col. Leyes de Reforma, Iztapalapa. <br> C.P. 09310. México D.F. 
+							div.info
+								img(src="_/img/icon_mail.png", alt="Correo electrónico")
+								.text: a(href="mailto:contacto@productoscomerciales.com.mx") contacto@productoscomerciales.com.mx
+							div.info
+								img(src="_/img/icon_call.png", alt="Teléfono")
+								.text: a(href="tel:56943957") (55) 56 94 39 57
+						.col7
+							div.info.formInfo
+								.text
+									.container
+										.col12
+											form
+												label(for="nombre") Nombre
+												input(type="text", name="Nombre", id="nombre")
+												label(for="correo") Correo
+												input(type="email", name="Correo", id="correo")
+												label(for="empresa") Empresa
+												input(type="text", name="Empresa", id="empresa")
+												label(for="necesito") Necesito
+												.container.radios
+													.col4
+														input(type="radio", name="Necesito", value="Pop & Merchandising", id="pop")
+														label(for="pop") Pop<br> & Merchandising
+													.col4
+														input(type="radio", name="Necesito", value="Packaging Folding Boxes", id="pack")
+														label(for="pack") Packaging<br>Folding Boxes
+													.col4
+														input(type="radio", name="Necesito", value="Pallets", id="pallets")
+														label(for="pallets") Pallets
+												.container.radios
+													.col5.push1
+														input(type="radio", name="Necesito", value="Brochures Stationey", id="brochures")
+														label(for="brochures") Brochures Stationey
+													.col5
+														input(type="radio", name="Necesito", value="Complementary services", id="compl")
+														label(for="compl") Complementary Services
+												.marginTopper
+												img(src="_/img/icon_form.png", alt="Formulario de contacto").messageIcon
+												label(for="mensaje") Mensaje
+												textarea(type="text", name="Mensaje", id="mensaje")
+												button(type="submit") Enviar
+				.col4
+					#map-contact
 		script(src="http://maps.google.com/maps/api/js?sensor=true")
 		+scripts
 		
