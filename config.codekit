@@ -273,6 +273,116 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_\/img\/gal\/p1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28348,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p1.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p10.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23187,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p10.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p10.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40747,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p2.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20173,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p3.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35403,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p4.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36191,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p5.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23486,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p6.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19021,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p7.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p8.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17720,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p8.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p8.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/gal\/p9.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32167,
+		"inputAbbreviatedPath": "\/_\/img\/gal\/p9.jpg",
+		"outputAbbreviatedPath": "\/_\/img\/gal\/p9.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_\/img\/home.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -500,6 +610,28 @@
 		"initialSize": 121875,
 		"inputAbbreviatedPath": "\/_\/img\/productos_pop.jpg",
 		"outputAbbreviatedPath": "\/_\/img\/productos_pop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/tecnologia.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18932,
+		"inputAbbreviatedPath": "\/_\/img\/tecnologia.png",
+		"outputAbbreviatedPath": "\/_\/img\/tecnologia.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_\/img\/todocuenta.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16642,
+		"inputAbbreviatedPath": "\/_\/img\/todocuenta.png",
+		"outputAbbreviatedPath": "\/_\/img\/todocuenta.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -861,15 +993,6 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pop.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/portafolio.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/portafolio.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
