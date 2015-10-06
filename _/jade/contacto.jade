@@ -11,7 +11,7 @@ html(lang="es")
 			
 			
 			.container.contactInfo
-				.col8
+				.two-thirds
 					.container
 						.col5
 							div.info
@@ -23,7 +23,7 @@ html(lang="es")
 							div.info
 								img(src="_/img/icon_call.png", alt="Teléfono")
 								.text: a(href="tel:56943957") (55) 56 94 39 57
-						.col7
+						.col7.formCont
 							div.info.formInfo
 								.text
 									.container
@@ -58,8 +58,7 @@ html(lang="es")
 												label(for="mensaje") Mensaje
 												textarea(type="text", name="Mensaje", id="mensaje")
 												button(type="submit") Enviar
-				.col4
+				.third
 					#map-contact
-		script(src="http://maps.google.com/maps/api/js?sensor=true")
 		+scripts
 		

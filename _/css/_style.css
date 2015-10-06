@@ -1117,6 +1117,9 @@ body.home {
 body.home header {
   background: transparent;
 }
+.wrapper {
+  height: 100%;
+}
 header {
   background: #858585;
   padding-bottom: 37px;
@@ -1317,6 +1320,7 @@ header nav ul li:hover ul {
 .productsSubmenu {
   *zoom: 1;
   padding: 40px 0;
+  height: calc(100% - 225px);
 }
 .productsSubmenu:before,
 .productsSubmenu:after {
@@ -1329,6 +1333,7 @@ header nav ul li:hover ul {
 .productsSubmenu ul {
   width: 100%;
   list-style: none;
+  height: 100%;
 }
 .productsSubmenu ul li {
   display: block;
@@ -1336,11 +1341,12 @@ header nav ul li:hover ul {
   width: 20%;
   display: table;
   overflow: hidden;
+  height: 100%;
 }
 .productsSubmenu ul li a {
   display: block;
   width: 100%;
-  height: 560px;
+  height: 100%;
   background: #858585;
   display: table-cell;
   vertical-align: bottom;
@@ -1356,6 +1362,8 @@ header nav ul li:hover ul {
   background-position: left;
   overflow: hidden;
   word-wrap: break-word;
+  background-repeat: none;
+  background-size: cover;
 }
 .productsSubmenu ul li a:hover {
   background-position: center;
@@ -1502,7 +1510,7 @@ header nav ul li:hover ul {
 #map-contact {
   height: 562px;
   margin-top: 0;
-  margin-left: -33px;
+  width: 100%;
 }
 .contactInfo {
   position: relative;
@@ -1556,6 +1564,9 @@ header nav ul li:hover ul {
   width: 100%;
   font-size: 1.1em;
   display: block;
+}
+.contactInfo .info .text .container textarea {
+  margin: 10px 0;
 }
 .contactInfo .info .text .container .messageIcon {
   margin-top: -30px;
@@ -1611,11 +1622,18 @@ header nav ul li:hover ul {
 .contactInfo .formInfo {
   background: #FDA050;
   margin: 0;
-  padding: 40px 0;
+  padding: 10px 20px;
+  height: 562px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .contactInfo .formInfo label {
+  display: block;
   font-size: 1.2em;
   font-weight: lighter;
+  margin-top: 10px;
+  font-size: 1em;
 }
 .genProducts {
   position: relative;
@@ -1748,4 +1766,92 @@ header nav ul li:hover ul {
 }
 .marginTopper {
   margin-top: 40px;
+}
+.tuideaproducto {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.tuideaproducto .iconis {
+  margin-top: 20px;
+}
+.tuideaproducto .iconis a {
+  display: inline-block;
+  margin: 10px 23px;
+}
+.tuideaproducto ul {
+  list-style: none;
+  margin: 40px 10px;
+}
+.tuideaproducto ul a {
+  display: inline-block;
+  color: #333333;
+  font-family: 'Cabin Condensed', sans-serif;
+  font-weight: 400;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  position: relative;
+}
+.tuideaproducto ul a:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: -40px;
+  top: 0;
+  background-image: url(../img/icon_go.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+.tuideaproducto ul a:hover {
+  color: #cb1d24;
+}
+.tuideaproducto ul a:hover:before {
+  display: block;
+}
+.tuideaproducto .minilinks a {
+  text-align: center;
+  display: block;
+  color: #333333;
+  font-family: 'Cabin Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 5px 0;
+  text-decoration: none;
+}
+.tuideaproducto .minilinks a:hover {
+  color: #cb1d24;
+}
+.tuideaproducto .garantia {
+  width: 100%;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.tuideaproducto .garantia .trail {
+  width: 70%;
+  float: left;
+  background: #f43f3b;
+  height: 14px;
+  margin-top: 24px;
+}
+.tuideaproducto .garantia img {
+  width: 20%;
+  float: left;
+}
+.two-thirds {
+  width: 66%;
+  float: left;
+}
+.third {
+  width: 34%;
+  float: right;
+  text-align: right;
+  height: 100%;
+}
+.formCont {
+  margin: 0;
+  float: right;
 }

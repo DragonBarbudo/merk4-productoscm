@@ -9,12 +9,11 @@ html(lang="es")
 		.wrapper
 			+header('portafolio', logoAlt)
 			
-			- for(e=0;e<4;e++)
-				.container
-					- for(i=0;i<3;i++)
-						a(href="_/img/gal/p#{i}.jpg", data-fluidbox).galleryitem.col4.tac
-							.ico
-							img(src="_/img/gal/p#{i}.jpg", alt="").w100
+			.container
+				- for(i=1;i<24;i++)
+					a(href="_/img/gal/p#{i}.jpg", data-fluidbox).galleryitem.col4.tac
+						.ico
+						img(src="_/img/gal/p#{i}.jpg", alt="").w100
 
 			
 					
