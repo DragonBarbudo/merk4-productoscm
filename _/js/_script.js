@@ -12,7 +12,7 @@ $(function(){
 			infoWindow: { content: '<img width="140px" src="_/img/productos-comerciales-mexico.png">' }
 		});
   }
-	
+
 
 	$('.proceso').slick({vertical:true});
 	$('.proceso-cre').click(function(e){
@@ -33,14 +33,22 @@ $(function(){
 		$(this).addClass('pro-active');
 		$('.proceso').slick('slickGoTo', 2);
 	});
-	
-	
-	
+
+
+
 	$('.gen-slider').slick({
 		respondTo: 'window',
 		dots: true
   });
-	
-	
-  
+	$('.sliderVertical').slick({
+		dots: false,
+		arrows:false,
+		vertical: true,
+		verticalSwiping: true,
+		autoplay: true,
+		pauseOnHover: false
+  });
+
+
+
 });
