@@ -37,8 +37,8 @@ $(function(){
 
 
 	$('.gen-slider').slick({
-		respondTo: 'window',
-		dots: true
+		dots: true,
+		autoplay: true
   });
 	$('.sliderVertical').slick({
 		dots: false,

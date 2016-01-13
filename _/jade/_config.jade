@@ -10,9 +10,9 @@
 - var logoAlt = "productos-comerciales-mexico_invertido.png"
 
 //Menus
-- var productosSub = [['pop', 'POP & Merchandising'], ['packaging', 'Packaging Folding Boxes'], ['pallets', 'Pallets'], ['brochures', 'Brochures Stationey'], ['complementary-services','Complementary services']]
+- var productosSub = [['pop', 'POP & Merchandising'], ['packaging', 'Packaging Folding Boxes'], ['pallets', 'Pallets'], ['brochures', 'Brochures Stationey'], ['portafolio', 'Portafolio']]
 - var empresaSub = [['proceso-elaboracion', 'Proceso de elaboración'],  ['mision-vision-filosofia','Misión, Visión y Filosofía' ]]
-- var menu = [['index', 'Inicio'], ['productos', 'Productos', productosSub], ['portafolio', 'Portafolio'], ['proceso-elaboracion', 'Empresa', empresaSub], ['clientes', 'Clientes'], ['contacto', 'Contacto']]
+- var menu = [['index', 'Inicio'], ['productos', 'Productos', productosSub], ['proceso-elaboracion', 'Empresa', empresaSub], ['clientes', 'Clientes'], ['contacto', 'Contacto']]
 
 
 mixin header(page, logoType)
@@ -39,31 +39,31 @@ mixin tuideaproducto
 			.col4.push1
 				img(src="_/img/ideaproducto.png", alt="Tu Idea, Tu Producto").w100
 				div.iconis
-					a(href="productos.html"): img(src="_/img/icon_shop.png", alt="")
+					a(href="portafolio.html"): img(src="_/img/icon_shop.png", alt="")
 					a(href="portafolio.html"): img(src="_/img/icon_portfolio.png", alt="")
 					a(href="clientes.html"): img(src="_/img/icon_list.png", alt="")
 				div
 					ul
-						li: a(href="productos.html") EMPAQUES
-						li: a(href="productos.html") COFRES, BAÚLES Y ESTUCHES
-						li: a(href="productos.html") EMBALAJES
-						li: a(href="productos.html") BLISTERS
-						li: a(href="productos.html") PRESS PACK
+						li: a(href="portafolio.html") EMPAQUES
+						li: a(href="portafolio.html") COFRES, BAÚLES Y ESTUCHES
+						li: a(href="portafolio.html") EMBALAJES
+						li: a(href="portafolio.html") BLISTERS
+						li: a(href="portafolio.html") PRESS PACK
 			.col6
-				img(src="_/img/ideaproductoicon.png", alt="Tu Idea, Tu Producto").w100
+				img(src="_/img/ideaproductoicon.png", alt="Tu Idea, Tu Producto").w100.tuideatuproducto
 		.container.minilinks
-			.col3
-				a(href="productos.html") Cartón corrugado flauta B y C
-				a(href="productos.html") Cartulina SBS 10 hasta 48 pts
-			.col3
-				a(href="productos.html") Papeles texturizados
-				a(href="productos.html") Cartón microcorrugado de 2C y 1C
-			.col3
-				a(href="productos.html") Papel auto adherible
-				a(href="productos.html") Papeles metalizados
-			.col3
-				a(href="productos.html") Papeles reciclados
-				a(href="productos.html") Cartón caple
+			.col3.col-t6.col-m6
+				a(href="portafolio.html") Cartón corrugado flauta B y C
+				a(href="portafolio.html") Cartulina SBS 10 hasta 48 pts
+			.col3.col-t6.col-m6
+				a(href="portafolio.html") Papeles texturizados
+				a(href="portafolio.html") Cartón microcorrugado de 2C y 1C
+			.col3.col-t6.col-m6
+				a(href="portafolio.html") Papel auto adherible
+				a(href="portafolio.html") Papeles metalizados
+			.col3.col-t6.col-m6
+				a(href="portafolio.html") Papeles reciclados
+				a(href="portafolio.html") Cartón caple
 		.garantia
 			.trail
 			img(src="_/img/garantia.png", alt="Garantía de entrega")

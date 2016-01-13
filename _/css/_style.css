@@ -622,8 +622,8 @@ ul.horizontal li > ul {
   margin-top: -10px;
   position: absolute;
   border: none;
-  background: #cb1d24;
-  color: #333333;
+  background: #CB1D24;
+  color: #333;
   z-index: 10;
 }
 .slick-arrow.slick-prev {
@@ -634,8 +634,8 @@ ul.horizontal li > ul {
 }
 .slick-arrow:hover {
   cursor: pointer;
-  background: #333333;
-  color: #cb1d24;
+  background: #333;
+  color: #CB1D24;
 }
 @-webkit-keyframes shaking {
   /*
@@ -858,7 +858,7 @@ ul.horizontal li > ul {
 }
 /* Slider */
 .slick-loading .slick-list {
-  background: #ffffff url('ajax-loader.gif') center center no-repeat;
+  background: #fff url('ajax-loader.gif') center center no-repeat;
 }
 /* Icons */
 @font-face {
@@ -1091,7 +1091,6 @@ a[class^='float'].float-right {
   text-align: right;
 }
 .container {
-  width: 960px;
   margin: 0 auto;
   *zoom: 1;
 }
@@ -1123,6 +1122,16 @@ body.home header {
 header {
   background: #858585;
   padding-bottom: 37px;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  header {
+    padding-bottom: 56px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header {
+    padding-bottom: 4px;
+  }
 }
 header #header {
   width: 960px;
@@ -1181,6 +1190,25 @@ header #header .logo {
 header #header .logo img {
   width: 100%;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  header #header .logo {
+    display: block;
+    float: left;
+    width: 47.91798%;
+    margin: 0 1.041%;
+    margin-left: 26.04099%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 959px) and only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) and only screen and (min-width: 481px) and (max-width: 959px) {
+  header #header .logo {
+    width: 47.91798%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 959px) and only screen and (max-width: 480px), only screen and (max-width: 480px) and only screen and (max-width: 480px) {
+  header #header .logo {
+    width: 97.91796%;
+  }
+}
 header #header .socials {
   display: block;
   float: left;
@@ -1204,10 +1232,17 @@ header #header .socials {
 }
 header #header .socials a {
   margin: 5px;
-  color: #ffffff;
+  color: #fff;
 }
 header #header .socials a:hover {
   color: #858585;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  header #header .socials {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 }
 header nav {
   width: 960px;
@@ -1246,7 +1281,7 @@ header nav:after {
 header nav ul {
   *zoom: 1;
   text-align: center;
-  border-bottom: 4px solid #ffffff;
+  border-bottom: 4px solid #fff;
   margin-top: -90px;
   position: relative;
 }
@@ -1258,8 +1293,18 @@ header nav ul:after {
 header nav ul:after {
   clear: both;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  header nav ul {
+    margin-top: 0;
+  }
+}
 header nav ul li {
   display: inline-block;
+}
+@media only screen and (max-width: 480px) {
+  header nav ul li {
+    width: 100%;
+  }
 }
 header nav ul li:before {
   content: "";
@@ -1269,21 +1314,42 @@ header nav ul li:before {
   height: 10px;
   width: 200px;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  header nav ul li:before {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header nav ul li:before {
+    width: 80%;
+  }
+}
 header nav ul li a {
   display: inline-block;
   padding: 60px 10px 16px 10px;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 700;
   font-size: 1.4em;
 }
 header nav ul li a:hover,
 header nav ul li a.active {
-  background: #f8ab31;
+  background: #F8AB31;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  header nav ul li a {
+    padding: 10px;
+    font-size: 1em;
+  }
 }
 header nav ul li:first-child {
   margin-left: 9.37433%;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  header nav ul li:first-child {
+    margin-left: 1.041%;
+  }
 }
 header nav ul li ul {
   display: none;
@@ -1293,24 +1359,53 @@ header nav ul li ul {
   left: 0;
   border-bottom: none;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  header nav ul li ul {
+    width: 100%;
+    bottom: 0;
+    top: 43px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header nav ul li ul {
+    position: static;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+}
 header nav ul li ul li {
   margin: 0 5px;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  header nav ul li ul li {
+    margin: 0 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header nav ul li ul li {
+    margin: 0;
+  }
 }
 header nav ul li ul li a {
   padding: 5px;
   font-size: 1em;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  header nav ul li ul li a {
+    display: inline-block;
+    font-size: 0.9em;
+  }
+}
 header nav ul li:hover ul {
   display: block;
 }
 .impulsamos {
-  width: 400px;
-  height: 248px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -200px;
-  margin-top: -124px;
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
   -webkit-animation-name: floating;
   -webkit-animation-duration: 2s;
   -webkit-transform-origin: 50% 50%;
@@ -1330,6 +1425,16 @@ header nav ul li:hover ul {
 .productsSubmenu:after {
   clear: both;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  .productsSubmenu {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .productsSubmenu {
+    height: 200px;
+  }
+}
 .productsSubmenu ul {
   width: 100%;
   list-style: none;
@@ -1343,6 +1448,20 @@ header nav ul li:hover ul {
   overflow: hidden;
   height: 100%;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  .productsSubmenu ul li {
+    width: 33.33333333%;
+  }
+  .productsSubmenu ul li:first-child + li + li + li,
+  .productsSubmenu ul li:first-child + li + li + li + li {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .productsSubmenu ul li {
+    width: 100%;
+  }
+}
 .productsSubmenu ul li a {
   display: block;
   width: 100%;
@@ -1354,7 +1473,7 @@ header nav ul li:hover ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 700;
   font-size: 1.4em;
@@ -1367,14 +1486,19 @@ header nav ul li:hover ul {
 }
 .productsSubmenu ul li a:hover {
   background-position: center;
-  font-size: 6em;
+  font-size: 4em;
   line-height: 0.8em;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
-  padding: 0;
+  padding: 0 0 20px 0;
   word-break: break-all;
+}
+@media only screen and (max-width: 480px) {
+  .productsSubmenu ul li a:hover {
+    font-size: 2em;
+  }
 }
 .productsSubmenu ul li:nth-child(1) a {
   background-image: url(../img/productos_pop.jpg);
@@ -1396,7 +1520,7 @@ header nav ul li:hover ul {
 .proceso-tec {
   display: block;
   font-size: 1.5em;
-  color: #333333;
+  color: #333;
   text-decoration: none;
   *zoom: 1;
   line-height: 140px;
@@ -1416,6 +1540,21 @@ header nav ul li:hover ul {
 .proceso-tec:after {
   clear: both;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .proceso-cre,
+  .proceso-pre,
+  .proceso-tec {
+    width: 33%;
+    float: left;
+    font-size: 1em;
+    line-height: 30px;
+  }
+  .proceso-cre span,
+  .proceso-pre span,
+  .proceso-tec span {
+    display: block;
+  }
+}
 .proceso-cre .ico,
 .proceso-pre .ico,
 .proceso-tec .ico {
@@ -1429,6 +1568,17 @@ header nav ul li:hover ul {
   transition: all 100ms ease-out;
   vertical-align: middle;
   float: right;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .proceso-cre .ico,
+  .proceso-pre .ico,
+  .proceso-tec .ico {
+    float: none;
+    text-align: center;
+    width: 70px;
+    height: 90px;
+    background-size: 200%;
+  }
 }
 .proceso-cre .span,
 .proceso-pre .span,
@@ -1458,7 +1608,7 @@ header nav ul li:hover ul {
 .proceso-cre.pro-active,
 .proceso-pre.pro-active,
 .proceso-tec.pro-active {
-  color: #cb1d24;
+  color: #CB1D24;
 }
 .proceso-cre:hover .ico,
 .proceso-pre:hover .ico,
@@ -1473,7 +1623,7 @@ header nav ul li:hover ul {
   transition: all 300ms ease-out;
 }
 .redtitle {
-  color: #cb1d24;
+  color: #CB1D24;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
   font-size: 1.8em;
@@ -1512,6 +1662,11 @@ header nav ul li:hover ul {
   margin-top: 0;
   width: 100%;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  #map-contact {
+    height: 100%;
+  }
+}
 .contactInfo {
   position: relative;
   margin-top: 20px;
@@ -1520,7 +1675,7 @@ header nav ul li:hover ul {
   background: #D44D55;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
 }
 .contactInfo .info {
   margin: 40px 0;
@@ -1541,19 +1696,19 @@ header nav ul li:hover ul {
   margin-top: 14px;
 }
 .contactInfo .info .text a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .contactInfo .info .text a:hover {
-  color: #333333;
+  color: #333;
 }
 .contactInfo .info .text .container {
   margin-bottom: 5px;
-  color: #ffffff;
+  color: #fff;
 }
 .contactInfo .info .text .container input,
 .contactInfo .info .text .container textarea {
-  background: #ffffff;
+  background: #fff;
   border: none;
   padding: 4px 6px;
   font-family: 'Cabin Condensed', sans-serif;
@@ -1585,7 +1740,7 @@ header nav ul li:hover ul {
   content: "";
   width: 10px;
   height: 10px;
-  border: 2px solid #cb1d24;
+  border: 2px solid #CB1D24;
   background: transparent;
   margin-right: 5px;
   -webkit-border-radius: 50%;
@@ -1597,10 +1752,10 @@ header nav ul li:hover ul {
   cursor: pointer;
 }
 .contactInfo .info .text .container.radios input:checked + label {
-  color: #333333;
+  color: #333;
 }
 .contactInfo .info .text .container.radios input:checked + label:before {
-  background: #cb1d24;
+  background: #CB1D24;
   border: none;
 }
 .contactInfo .info .text .container button {
@@ -1610,14 +1765,14 @@ header nav ul li:hover ul {
   padding: 10px 20px;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
-  color: #ffffff;
-  background: #cb1d24;
+  color: #fff;
+  background: #CB1D24;
   cursor: pointer;
   font-size: 1.1em;
   float: right;
 }
 .contactInfo .info .text .container button:hover {
-  background: #333333;
+  background: #333;
 }
 .contactInfo .formInfo {
   background: #FDA050;
@@ -1635,9 +1790,18 @@ header nav ul li:hover ul {
   margin-top: 10px;
   font-size: 1em;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .contactInfo .formInfo {
+    height: auto;
+  }
+}
+.infoaddress .info {
+  text-align: right;
+}
 .genProducts {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 .menuGen {
   position: absolute;
@@ -1671,12 +1835,17 @@ header nav ul li:hover ul {
 .menuGen:after {
   clear: both;
 }
+@media only screen and (max-width: 480px) {
+  .menuGen {
+    width: 60%;
+  }
+}
 .menuGen h1 {
   margin: 20px;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 700;
   font-size: 2em;
-  color: #ffffff;
+  color: #fff;
 }
 .menuGen ul {
   margin: 20px;
@@ -1686,27 +1855,17 @@ header nav ul li:hover ul {
 .menuGen ul li {
   text-align: right;
   margin: 5px 0;
-}
-.menuGen ul li a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
 }
-.menuGen ul li a small {
+.menuGen ul li small {
   font-size: 0.8em;
   display: block;
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-}
-.menuGen ul li a:hover {
-  font-size: 1.6em;
-}
-.menuGen ul li a:hover small {
-  -webkit-opacity: 0.9;
-  -moz-opacity: 0.9;
-  opacity: 0.9;
 }
 .gen-slider {
   margin-bottom: 0;
@@ -1729,7 +1888,7 @@ header nav ul li:hover ul {
   z-index: 10;
   height: 100%;
   background: rgba(51, 51, 51, 0.9);
-  color: #ffffff;
+  color: #fff;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
   font-size: 1.4em;
@@ -1751,7 +1910,7 @@ header nav ul li:hover ul {
   bottom: 20px;
 }
 .gen-slider .slick-dots li.slick-active button::before {
-  color: #ffffff;
+  color: #fff;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -1759,7 +1918,7 @@ header nav ul li:hover ul {
 }
 .gen-slider .slick-dots li button::before {
   font-size: 6px;
-  color: #ffffff;
+  color: #fff;
   -webkit-opacity: 0.6;
   -moz-opacity: 0.6;
   opacity: 0.6;
@@ -1784,7 +1943,7 @@ header nav ul li:hover ul {
 }
 .tuideaproducto ul a {
   display: inline-block;
-  color: #333333;
+  color: #333;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
   font-weight: bold;
@@ -1806,7 +1965,7 @@ header nav ul li:hover ul {
   display: none;
 }
 .tuideaproducto ul a:hover {
-  color: #cb1d24;
+  color: #CB1D24;
 }
 .tuideaproducto ul a:hover:before {
   display: block;
@@ -1814,7 +1973,7 @@ header nav ul li:hover ul {
 .tuideaproducto .minilinks a {
   text-align: center;
   display: block;
-  color: #333333;
+  color: #333;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: 400;
   font-size: 0.9em;
@@ -1823,7 +1982,7 @@ header nav ul li:hover ul {
   text-decoration: none;
 }
 .tuideaproducto .minilinks a:hover {
-  color: #cb1d24;
+  color: #CB1D24;
 }
 .tuideaproducto .garantia {
   width: 100%;
@@ -1837,13 +1996,30 @@ header nav ul li:hover ul {
   height: 14px;
   margin-top: 24px;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .tuideaproducto .garantia .trail {
+    width: 50%;
+  }
+}
 .tuideaproducto .garantia img {
   width: 20%;
-  float: left;
+  float: right;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .tuideaproducto .garantia img {
+    width: 40%;
+    margin-right: 20px;
+  }
 }
 .two-thirds {
   width: 66%;
   float: left;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .two-thirds {
+    float: none;
+    width: 100%;
+  }
 }
 .third {
   width: 34%;
@@ -1851,7 +2027,19 @@ header nav ul li:hover ul {
   text-align: right;
   height: 100%;
 }
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .third {
+    width: 100%;
+    height: 300px !important;
+    float: none;
+  }
+}
 .formCont {
   margin: 0;
   float: right;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .tuideatuproducto {
+    margin-top: 200px;
+  }
 }

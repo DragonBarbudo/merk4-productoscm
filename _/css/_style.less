@@ -30,7 +30,7 @@
 //	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>	>
 //classes and styles
 .container{
-  width: @fw;
+  //width: @fw;
   margin: 0 auto;
   .clearfix;
 }
@@ -51,14 +51,25 @@ body{
 header{
 	background: @gray;
 	padding-bottom: 37px;
+	@media @tablet{
+		padding-bottom: 56px;
+	}
+	@media @mobile{
+		padding-bottom: 4px;
+	}
 	#header{
 		.container;
 		.logo{
-			.col(2);position: relative; z-index: 10;
+			.col(2);
+			position: relative; z-index: 10;
 			text-align: center;
 			margin-top: 20px;
 			img{
 				width: 100%;
+			}
+			@media @tablet, @mobile{
+				.col(6);
+				.push(3);
 			}
 		}
 		.socials{
@@ -73,6 +84,9 @@ header{
 					color: @gray;
 				}
 			}
+			@media @tablet, @mobile{
+				position: absolute; right: 10px; top: 10px;
+			}
 		}
 	}
 	nav{
@@ -83,14 +97,27 @@ header{
 			border-bottom:4px solid @w;
 			margin-top: -90px;
 			position: relative;
+			@media @tablet, @mobile{
+				margin-top: 0;
+			}
 			li{
 				display: inline-block;
+				@media @mobile{
+					width: 100%;
+				}
 				&:before{
 					content:"";
 					display: block;
 					position: absolute;
 					bottom: -10px; height: 10px;
 					width: 200px;
+					@media @tablet{
+						width: 100px;
+					}
+					@media @mobile{
+						width: 80%;
+					}
+
 				}
 				a{
 					display: inline-block;
@@ -102,8 +129,15 @@ header{
 					&:hover, &.active{
 						background: @yellow;
 					}
+					@media @tablet, @mobile{
+						padding: 10px;
+						font-size: 1em;
+					}
 				}
-				&:first-child{.push(1);}
+				&:first-child{
+					.push(1);
+					@media @tablet, @mobile{ .push(0); }
+				}
 				ul{
 					display: none;
 					position: absolute;
@@ -111,11 +145,31 @@ header{
 					width: @fw;
 					left: 0;
 					border-bottom: none;
+					@media @tablet{
+						width: 100%;
+						bottom: 0;
+						top: 43px;
+					}
+					@media @mobile{
+						position: static;
+						top: 0; left: 0; bottom: 0; right: 0;
+						width: 100%;
+					}
 					li{
 							margin: 0 5px;
+							@media @tablet{
+								margin: 0 10px;
+							}
+							@media @mobile{
+								margin: 0;
+							}
 							a{
 								padding: 5px;
 								font-size: 1em;
+								@media @tablet, @mobile{
+									display: inline-block;
+									font-size: 0.9em;
+								}
 							}
 						}
 				}
@@ -131,12 +185,11 @@ header{
 }
 
 .impulsamos{
-	width: 400px; height: 248px;
-	position: absolute;
-	top: 50%; left: 50%;
-	margin-left: -200px;
-	margin-top: -124px;
+	width: 100%;
+	margin-top: 80px;
+	text-align: center;
 	.floating;
+
 }
 
 
@@ -144,6 +197,12 @@ header{
 	.clearfix;
 	padding: 40px 0;
 	height: ~"calc(100% - 225px)";
+	@media @tablet{
+		height: 400px;
+	}
+	@media @mobile{
+		height: 200px;
+	}
 	ul{
 		width: 100%;
 		list-style: none;
@@ -155,7 +214,15 @@ header{
 			display: table;
 			overflow: hidden;
 			height: 100%;
-
+			@media @tablet{
+				width: 100%/3;
+				&:first-child+li+li+li, &:first-child+li+li+li+li{
+					width: 50%;
+				}
+			}
+			@media @mobile{
+				width: 100%;
+			}
 			a{
 				display: block;
 				width: 100%;
@@ -176,11 +243,14 @@ header{
 				background-size: cover;
 				&:hover{
 					background-position: center;
-					font-size: 6em;
+					font-size: 4em;
 					line-height: 0.8em;
 					.transition(all 300ms);
-					padding: 0;
+					padding: 0 0 20px 0;
 					word-break: break-all;
+					@media @mobile{
+						font-size: 2em;
+					}
 				}
 			}
 			&:nth-child(1) a{ background-image: url(../img/productos_pop.jpg); }
@@ -201,6 +271,16 @@ header{
 	.clearfix;
 	line-height:140px;
 	text-align: center;
+
+	@media @tablet, @mobile{
+		width: 33%;
+		float: left;
+		font-size: 1em;
+		line-height: 30px;
+		span{
+			display: block;
+		}
+	}
 	.ico{
 		width: 140px; height: 180px;
 		display: inline-block;
@@ -208,6 +288,12 @@ header{
 		.transition( all 100ms ease-out);
 		vertical-align: middle;
 		float: right;
+		@media @tablet, @mobile{
+			float: none;
+			text-align: center;
+			width: 70px; height: 90px;
+			background-size: 200%;
+		}
 	}
 	.span{
 		display: inline-block;
@@ -271,6 +357,9 @@ header{
 	height: 562px;
 	margin-top: 0;
 	width: 100%;
+	@media @tablet, @mobile{
+		height: 100%;
+	}
 }
 
 
@@ -287,10 +376,8 @@ header{
 
 	.info{
 		margin: 40px 0;
-
 		.clearfix;
 		img{
-
 			height: 100%;
 		}
 		.text{
@@ -382,13 +469,21 @@ header{
 			margin-top: 10px;
 			font-size: 1em;
 		}
+		@media @tablet, @mobile{
+			height: auto;
+		}
 	}
 }
 
 
+.infoaddress .info{
+	text-align: right;
+}
+
 .genProducts{
 	position: relative;
 	width: 100%;
+	height: 100%;
 }
 .menuGen{
 	position: absolute;
@@ -399,6 +494,10 @@ header{
 	.clearfix;
 	z-index: 10;
 	left: 0; top: 0;
+	@media @mobile{
+		width: 60%;
+	}
+
 	h1{
 		margin: 20px;
 		.font(700);
@@ -412,21 +511,13 @@ header{
 		li{
 			text-align: right;
 			margin: 5px 0;
-			a{
-				color: @w;
-				text-decoration: none;
-				.font;
-				small{
-					font-size: 0.8em;
-					display: block;
-					.opacity(0.5);
-				}
-				&:hover{
-					font-size: 1.6em;
-					small{
-						.opacity(0.9);
-					}
-				}
+			color: @w;
+			text-decoration: none;
+			.font;
+			small{
+				font-size: 0.8em;
+				display: block;
+				.opacity(0.5);
 			}
 		}
 	}
@@ -539,12 +630,17 @@ header{
 			background: #f43f3b;
 			height: 14px;
 			margin-top: 24px;
-
+			@media @tablet, @mobile{
+				width: 50%;
+			}
 		}
 		img{
 			width: 20%;
-			float: left;
-
+			float: right;
+			@media @tablet, @mobile{
+					width: 40%;
+					margin-right: 20px;
+			}
 		}
 	}
 }
@@ -554,14 +650,31 @@ header{
 .two-thirds{
 	width: 66%;
 	float: left;
+	@media @tablet, @mobile{
+		float: none;
+		width: 100%;
+	}
 }
 .third{
 	width: 34%;
 	float: right;
 	text-align: right;
 	height: 100%;
+	@media @tablet, @mobile{
+		width: 100%;
+		height: 300px !important;
+		float: none;
+	}
 }
 .formCont{
 	margin: 0;
 	float:right;
+}
+
+
+
+.tuideatuproducto{
+	@media @tablet, @mobile{
+		margin-top: 200px;
+	}
 }
