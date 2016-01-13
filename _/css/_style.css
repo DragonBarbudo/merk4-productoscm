@@ -1412,6 +1412,11 @@ header nav ul li:hover ul {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
 }
+@media only screen and (max-width: 480px) {
+  .impulsamos img {
+    width: 80%;
+  }
+}
 .productsSubmenu {
   *zoom: 1;
   padding: 40px 0;
