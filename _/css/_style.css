@@ -1110,7 +1110,7 @@ body {
   font-weight: 400;
 }
 body.home {
-  background: url(../img/home.jpg) center no-repeat;
+  background: url(../img/home.jpg) center;
   background-size: cover;
 }
 body.home header {
